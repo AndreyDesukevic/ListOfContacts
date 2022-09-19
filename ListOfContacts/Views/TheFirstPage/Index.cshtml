@@ -1,0 +1,107 @@
+﻿@using ListOfContacts.EfStuff.Enum
+@model List<ContactViewModel>
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script src="~/js/index.js"></script>
+}
+    <form id="register1" action="#">
+        <div class="text-center">
+            <h1 class="display-4">Welcome to contacts of list</h1>
+        </div>
+        <div class="contacts">
+            <div class="catalogItem addContact">
+                <div>
+                    <img src=/images/ContactAddWhite.svg class="avatar" />
+                </div>
+                <div class="textAddContact textUnderAvatar">
+                    Add Contact
+                </div>
+            </div>
+        @foreach (var item in Model)
+        {
+            <div class="catalogItem" data-id="@item.Id">
+                <div>
+                    <img src=/images/Avatar.svg class="avatar" />
+                </div>
+                <div class="textUnderAvatar">
+                    <div class="name"> @item.Name </div>
+                    <div class="mobilePhone"> @item.MobilePhone</div>
+                    <div class="jobTitle"> Job: @item.JobTitle</div>
+                    <div class="birthDate"> BirthDate: @item.BirthDate.ToShortDateString()</div>
+                </div>
+                <div class="hideIcon" data-id="@item.Id">
+                    <div>
+                        <a href="#" class="editContact" data-id="@item.Id"> <img src=~/images/EditWhite.svg class="contactLitleLogo editContactLogo" /></a>
+                    </div>
+                    <div>
+                        <a href="#" class="deleteContact" data-id="@item.Id"> <img src=~/images/DeleteWhite.svg class="contactLitleLogo deleteContactLogo" /></a>
+                    </div>
+                </div>
+            </div>
+            <div id="popup2" class="popup" data-id="@item.Id">
+                <div class="popupBody">
+                    <div class="popupContent">
+                        <a href="#" class="popupClose">X</a>
+                        <div class="popupTitle">Update Contact</div>
+
+                        <div class="popupText">
+                            <div class="popupTextImput">
+                                <div class="popupTextMini">Name:</div>
+                                <input id="name" name="name" type="text" value="@item.Name" />
+                            </div>
+                            <div class="popupTextImput">
+                                <div class="popupTextMini">MobilePhone:</div>
+                                <input class="mobilePhoneImput" id="mobilePhone" name="mobilePhone" type="tel" value="@item.MobilePhone" />
+                            </div>
+                            <div class="popupTextImput">
+                                <div class="popupTextMini">JobTitle:</div>
+                                <input id="jobTitle" name="jobTitle" type="text" value="@item.JobTitle" />
+                            </div>
+                            <div class="popupTextImput">
+                                <div class="popupTextMini">JobTitle:</div>
+                                <input id="birthDate" name="birthDate" type="date" value="@item.BirthDate.ToString("yyy-MM-dd")" />
+                            </div>
+                        </div>
+                        <div>
+                            <input type="submit" value="Update" class="updateContactPopup" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div id="popup1" class="popup">
+        <div class="popupBody">
+            <div class="popupContent">
+                <a href="#" class="popupClose">X</a>
+                <div class="popupTitle">
+                    Add Contact
+                </div>
+                <div class="popupText">
+                    <div class="popupTextImput">
+                        <div class="popupTextMini">Name:</div>
+                        <input id="name1" name="name" type="text" />
+                    </div>
+                    <div class="popupTextImput">
+                        <div class="popupTextMini">MobilePhone:</div>
+                        <input class="mobilePhoneImput" id="mobilePhone1" name="mobilePhone" type="text" />
+                    </div>
+                    <div class="popupTextImput">
+                        <div class="popupTextMini">JobTitle:</div>
+                        <input id="jobTitle1" name="jobTitle" type="text" />
+                    </div>
+                    <div class="popupTextImput">
+                        <div class="popupTextMini">BirthDate: </div>
+                        <input id="birthDate1" name="birthDate" type="date" />
+                    </div>
+                    <div>
+                        <input type="submit" value="Add" class="addContactPopup" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
