@@ -10,6 +10,7 @@ namespace ListOfContacts.EfStuff
 {
     public class WebDbContext : DbContext
     {
+        public DbSet<User> Users { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public WebDbContext(DbContextOptions options) : base(options)
         {

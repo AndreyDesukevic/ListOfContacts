@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace ListOfContacts
 {
@@ -27,6 +28,12 @@ namespace ListOfContacts
         {
             var connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DatabaseContacts;Integrated Security=True;";
             services.AddDbContext<WebDbContext>(x => x.UseSqlServer(connectString));
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options => //CookieAuthenticationOptions
+                {
+                    options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+                });
 
             services.AddScoped<ContactRepository>(x => new ContactRepository(x.GetService<WebDbContext>()));
 
@@ -47,6 +54,8 @@ namespace ListOfContacts
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();    // аутентификация
+         
 
             app.UseAuthorization();
 

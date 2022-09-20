@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vlsN6tbxoL4rJNLIta9zbya9rYoR2q+BqSfbo/vrmwREbpfLj6Hs58bSYOQjY7PLl0P1Q93cvh5IIodOdq4uvQ==",
+  "dgSpecHash": "cJ7iP2Y/AWc5CEXj3cpih6Zi02YxXVU8B15xPCanAUtmhhJo75ZWxdAMXPLd+Q1NxWFlvybTPMtejrOx2++/Kg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andre\\source\\repos\\Test\\ListOfContacts\\ListOfContacts\\ListOfContacts.csproj",
+  "projectFilePath": "C:\\Users\\andre\\Source\\Repos\\ListOfContacts\\ListOfContacts\\ListOfContacts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\jquery\\3.6.0\\jquery.3.6.0.nupkg.sha512",
