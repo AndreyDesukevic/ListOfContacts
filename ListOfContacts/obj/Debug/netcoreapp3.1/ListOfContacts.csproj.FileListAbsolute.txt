@@ -756,3 +756,5 @@ C:\Users\andre\Source\Repos\ListOfContacts\ListOfContacts\obj\Debug\netcoreapp3.
 C:\Users\andre\Source\Repos\ListOfContacts\ListOfContacts\obj\Debug\netcoreapp3.1\ListOfContacts.Views.pdb
 C:\Users\andre\Source\Repos\ListOfContacts\ListOfContacts\obj\Debug\netcoreapp3.1\ListOfContacts.csproj.CopyComplete
 C:\Users\andre\Source\Repos\ListOfContacts\ListOfContacts\obj\Debug\netcoreapp3.1\ListOfContacts.genruntimeconfig.cache
+C:\Users\andre\Source\Repos\ListOfContacts\ListOfContacts\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\andre\Source\Repos\ListOfContacts\ListOfContacts\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
